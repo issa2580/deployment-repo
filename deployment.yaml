@@ -15,6 +15,7 @@ spec:
       containers:
         - name: register-app
           image: martinez42/connectocloud
+          command: ["yarn", "dev", "--hostname", "0.0.0.0"]
           resources:
             limits:
               memory: "256Mi"
