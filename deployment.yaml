@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: register-app
+        app: register-app # ✅ Doit correspondre au Service
     spec:
       containers:
         - name: register-app
