@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: connectocloud-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: connectocloud-app
+  template:
+    metadata:
+      labels:
+        app: connectocloud-app
+    spec:
+      containers:
+        - name: connectocloud-app
+          image: martinez42/connectocloud
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 3000
