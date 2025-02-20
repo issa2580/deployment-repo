@@ -10,12 +10,11 @@ spec:
   template:
     metadata:
       labels:
-        app: register-app # ✅ Doit correspondre au Service
+        app: register-app
     spec:
       containers:
         - name: register-app
           image: martinez42/connectocloud
-          command: ["yarn", "dev", "--hostname", "0.0.0.0"]
           resources:
             limits:
               memory: "256Mi"
